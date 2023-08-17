@@ -4,8 +4,6 @@ Numbers=($1 $2 $3 $4 )
 
 echo "Numbers are : ${Numbers[@]}"
 
-for i in $Numbers
-do 
-   echo "number is : $i"
+sum=$((Numbers[0]+Numbers[1]))
 
-done
+echo "Sum of first 2 numbers is : $sum"
