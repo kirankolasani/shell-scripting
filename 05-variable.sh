@@ -10,6 +10,6 @@ read -s user
 echo "Plz enter password : "
 read -s pwd
 
-echo "Ur username is : $G $user $N"
+echo -e "Ur username is : $G $user $N"
 
-echo "Ur password is : $R $pwd $N"
+echo -e "Ur password is : $R $pwd $N"
