@@ -77,7 +77,7 @@ Validate(){
 while true
 do
   Validate "Please enter 1st Person name :"
-  break
+  
 done
 
 echo "Hey $P1, H R U ?"
