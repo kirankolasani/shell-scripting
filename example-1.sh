@@ -11,8 +11,15 @@ echo "Time is now : $Date"
 # P2=Ram
 
 # Dynamic variables
-P1=$1
-P2=$2
+# P1=$1
+# P2=$2
+
+# Reading inputs from command propmt
+
+echo "Please provide 1st Person Name : "
+read P1
+echo "Please provide 2nd user name : "
+read P2
 
 if [ $# != 2 ]
 then 
