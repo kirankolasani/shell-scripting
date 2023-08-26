@@ -33,11 +33,11 @@ echo "Time is now : $Date"
 read -p "Plz enter 1st person name: " P1
  while true
  do 
-   if [ -n "$P1" ]
+   if [ -z "$P1" ]
    then
-     break # exit the loop if user enter thre value
+       echo "It's not empty, Plz enter name again "
    else 
-     echo "It's not empty, Plz enter name again "   
+       break 
    fi
 
  done
