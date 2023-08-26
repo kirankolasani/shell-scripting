@@ -31,9 +31,37 @@ echo "Time is now : $Date"
 ## checking user enter input is not empty.
 
 
- while true
- do 
-   read -p "Plz enter 1st person name: " P1
+#  while true
+#  do 
+#    read -p "Plz enter 1st person name: " P1
+#    if [ -z "$P1" ]
+#    then
+#        echo "It's not empty, Plz enter name again "
+       
+#    elif [[ ! "$P1" =~ ^[a-zA-Z]+$ ]]
+#    then
+#        echo "Plz enter valid string value, only letters "
+#    else
+#        break 
+#    fi
+
+#  done
+
+# while true
+#  do 
+#    read -p "Plz enter 2nd person name: " P2
+#    if [ -z "$P2" ]
+#    then
+#        echo "It's not empty, Plz enter name again "
+       
+#    else 
+#        break 
+#    fi
+
+#  done
+
+Validate(){
+   read -p "$1" P1
    if [ -z "$P1" ]
    then
        echo "It's not empty, Plz enter name again "
@@ -44,21 +72,12 @@ echo "Time is now : $Date"
    else
        break 
    fi
+}
 
- done
-
-  while true
- do 
-   read -p "Plz enter 2nd person name: " P2
-   if [ -z "$P2" ]
-   then
-       echo "It's not empty, Plz enter name again "
-       
-   else 
-       break 
-   fi
-
- done
+while true
+do
+  Validate "Please enter 1st Person name :"
+done
 
 echo "Hey $P1, H R U ?"
 echo "Heloo $P2, I'm good what about u ?"
