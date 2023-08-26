@@ -11,6 +11,8 @@ Validate() {
             break
         fi
     done
+    # Return the validated input to the caller
+    eval "$2='$value'"
 }
 
 Validate "Please enter 1st Person name: " P1
