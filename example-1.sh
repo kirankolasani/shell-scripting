@@ -14,6 +14,12 @@ echo "Time is now : $Date"
 P1=$1
 P2=$2
 
+if [ $# != 2 ]
+then 
+  echo "Plz pass 2 Args at command line"
+  echo "Usage ex: sh $0 Arg1 Arg2 "
+fi
+
 echo "Hey $P1, H R U ?"
 echo "Heloo $P2, I'm good what about u ?"
 echo "I'm alos too good $P1"
