@@ -36,6 +36,7 @@ read -p "Plz enter 1st person name: " P1
    if [ -z "$P1" ]
    then
        echo "It's not empty, Plz enter name again "
+       exit
    else 
        break 
    fi
