@@ -39,6 +39,7 @@ echo "Time is now : $Date"
        echo "It's not empty, Plz enter name again "
        
    elif [[ ! "$P1" =~ ^[a-zA-Z]+$ ]]
+   then
        echo "Plz enter valid string value, only letters "
    else
        break 
