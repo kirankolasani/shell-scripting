@@ -19,12 +19,19 @@ echo "Time is now : $Date"
 echo "Please provide 1st Person Name : "
 read P1
 echo "Please provide 2nd user name : "
-read P2
+read -s P2
 
-if [ $# != 2 ]
+# if [ $# != 2 ]
+# then 
+#   echo "Plz pass 2 Args at command line"
+#   echo "Usage ex: sh $0 Arg1 Arg2 "
+#   exit
+# fi
+
+if [ $P1 == " " ]
 then 
-  echo "Plz pass 2 Args at command line"
-  echo "Usage ex: sh $0 Arg1 Arg2 "
+  echo "Plz provide name, It's not empty"
+  read P1
   exit
 fi
 
