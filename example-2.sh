@@ -14,7 +14,7 @@ Validate() {
 }
 
 Validate "Please enter 1st Person name: " P1
-Validate "Please enter 2nd Person name: " P2
+# Validate "Please enter 2nd Person name: " P2
 
 echo "Hey $P1, H R U ?"
 echo "Heloo $P2, I'm good what about u ?"
