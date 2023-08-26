@@ -44,6 +44,19 @@ echo "Time is now : $Date"
 
  done
 
+  while true
+ do 
+   read -p "Plz enter 2nd person name: " P2
+   if [ -z "$P2" ]
+   then
+       echo "It's not empty, Plz enter name again "
+       
+   else 
+       break 
+   fi
+
+ done
+
 echo "Hey $P1, H R U ?"
 echo "Heloo $P2, I'm good what about u ?"
 echo "I'm alos too good $P1"
