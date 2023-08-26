@@ -2,6 +2,6 @@
 
 echo "Hello , KIran welcome to Shell scripting"
 
-Date=${date}
+Date=$(date)
 
 echo "Time is now : $Date"
