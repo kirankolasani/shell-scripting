@@ -28,7 +28,7 @@ read -s P2
 #   exit
 # fi
 
-if [ $P1 == " " ]
+if [ $P1 == NULL ]
 then 
   echo "Plz provide name, It's not empty"
   read P1
