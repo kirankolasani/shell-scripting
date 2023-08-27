@@ -13,6 +13,20 @@ Validate() {
        echo "installation is failed"
     fi
 }
+Install_validate() {
+
+}
+packages=$((yum list instlled |grep -w "mysql" | awk '{print "mysql"}' ))
+for package in ${packages[@]}
+do
+  if [ $package == "mysql" ]
+  then
+     echo "$package is already installed"
+  else
+     echo "$package is not yet installed , So procccding with installation"
+  fi
+done
+
 if [ $user == 0 ]
 then 
    echo "this script is running under the user `id`" 
