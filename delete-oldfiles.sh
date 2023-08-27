@@ -9,7 +9,7 @@ Logdir="`pwd`/../logs"
 Date=$(date +%F-%H)
 log="$Logdir/$0-$Date.log"
 
-old_log_files=$(find Logdir -name "*" -type f -mtime +30)
+old_log_files=$(find $Logdir -name "*" -type f -mtime +30)
 echo "$old_log_files"
 
 while IFS= read -r line
