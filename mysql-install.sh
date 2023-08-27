@@ -15,8 +15,9 @@ Validate() {
 }
 P=mysql
 echo "$P"
-packages=($(yum list installed |grep -w "$P" | awk '{print "$P"}'))
-echo "${packages[@]"
+#packages=($(yum list installed |grep -w "$P" | awk '{print "$P"}'))
+packages=($(yum list installed | grep -wo "$P"))
+
 for package in ${packages[@]}
 do
   if [ $package == "$P" ]
