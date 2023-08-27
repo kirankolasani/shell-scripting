@@ -12,7 +12,7 @@ validate() {
     if [ $1 == 0 ];then
      echo -e "$G $2 $N"
     else 
-     echo "$R $3 $N" 
+     echo -e "$R $3 $N" 
     fi
 }
 #if [ -z "$packages" ]
