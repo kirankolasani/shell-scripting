@@ -18,6 +18,6 @@ Validate() {
 Validate "Please enter 1st number: " P1
 Validate "Please enter 2nd number: " P2
 
-add=$( echo "P1 + P2" | bc)
+result=$( echo "P1 + P2" | bc)
 
-echo "Addition of 2 mumber is : $add "
+echo "Addition of 2 mumber is : $result "
