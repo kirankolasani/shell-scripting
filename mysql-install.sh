@@ -14,15 +14,15 @@ Validate() {
     fi
 }
 P=mysql
+echo "$P"
 packages=($(yum list installed |grep -w "$P" | awk '{print "$P"}'))
+echo "${packages[@]"
 for package in ${packages[@]}
 do
   if [ $package == "$P" ]
   then
      echo "$P is already installed"
      exit
-  else
-     echo "$P is not yet installed , So procccding with installation"
   fi
 done
 
