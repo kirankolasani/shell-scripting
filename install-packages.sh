@@ -15,6 +15,7 @@ then
    echo "Please provide package names correctly to be installed"
    exit 
 fi
+echo "$packages"
 for package in $packages
 do 
   P=($(yum list installed|grep -wo "$package"))
