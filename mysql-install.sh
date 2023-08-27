@@ -13,15 +13,16 @@ Validate() {
        echo "installation is failed"
     fi
 }
-packages=($(yum list installed |grep -w "mysql" | awk '{print "mysql"}'))
+P=mysql
+packages=($(yum list installed |grep -w "$P" | awk '{print "$P"}'))
 for package in ${packages[@]}
 do
-  if [ $package == "mysql" ]
+  if [ $package == "$P" ]
   then
-     echo "$package is already installed"
+     echo "$P is already installed"
      exit
   else
-     echo "$package is not yet installed , So procccding with installation"
+     echo "$P is not yet installed , So procccding with installation"
   fi
 done
 
