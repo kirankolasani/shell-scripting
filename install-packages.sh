@@ -13,18 +13,21 @@ validate() {
 if [ -z "$packages" ]
 then 
    echo "Please provide package names correctly to be installed"
-   exit 1
+   exit 
 fi
 for package in $packages
 do 
   P=($(yum list installed|grep -wo "$package"))
+  echo "$P"
   for name in $P
   do
+    echo "$name"
     if [ $name == $package ]
     then
         echo "$package is already installed"
         break
     else
+       echo ""
        sudo yum install $package -y
        validate $? "$package is installed successfully" "$package is not installed __Failed"
     fi
