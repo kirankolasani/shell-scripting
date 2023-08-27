@@ -5,7 +5,7 @@
 #  echo "Reading Line : $line"
 # done < "/etc/passwd"
 
-Logdir="`pwd`/../logs"
+Logdir="/home/centos/logs"
 Date=$(date +%F-%H)
 log="$Logdir/$0-$Date.log"
 echo "$Date --started script" &>>$log
