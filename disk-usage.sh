@@ -9,7 +9,7 @@ do
   if [ "${usage%\%}" -ge "${threashold_value%\%}" ]
   then
       echo "$usage is greather $threashold_value"
-      echo "$(disk_usage_list|grep "Use%")"
+      echo "$(df -hT|grep "Use%")"
       echo "$line"
   fi
 done <<< "$disk_usage_list"
