@@ -2,7 +2,8 @@
 
 disk_usage_list=$(df -hT)
 threashold_value="10%"
-message="$0.log"
+Date=$(date +%F-%H_%M_%S)
+message="$0-$Date.log"
 while IFS= read -r line
 do 
 #   echo "Reading line : $line"
@@ -16,7 +17,7 @@ do
       echo "$usage is greather $threashold_value" &>>$message
       echo "$(df -hT|grep "Use%")" &>>$message
       echo "$line" &>>$message
-      echo "$message" | mail -s "High Disk Usgae Alert" "kirankumark906@gmail.com"
+      cat "$message" | mail -s "High Disk Usgae Alert" "kirankumark906@gmail.com"
     fi
   fi  
 done <<< "$disk_usage_list"
