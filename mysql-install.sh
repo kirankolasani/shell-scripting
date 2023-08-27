@@ -14,7 +14,7 @@ Validate() {
     fi
 }
 P=mysql
-echo "$P"
+#echo "$P"
 #packages=($(yum list installed |grep -w "$P" | awk '{print "$P"}'))
 packages=($(yum list installed | grep -wo "$P"))
 
