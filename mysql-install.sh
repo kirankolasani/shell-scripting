@@ -19,6 +19,7 @@ do
   if [ $package == "mysql" ]
   then
      echo "$package is already installed"
+     break
   else
      echo "$package is not yet installed , So procccding with installation"
   fi
