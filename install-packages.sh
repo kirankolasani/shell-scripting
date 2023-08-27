@@ -15,14 +15,14 @@ then
    echo "Please provide package names correctly to be installed"
    exit 
 fi
-echo "$packages"
-for package in $packages
+echo "${packages[@]}"
+for package in ${packages[@]}
 do 
+  echo "inside 1st for loop package : $package"
   P=($(yum list installed|grep -wo "$package"))
-  echo "$P"
-  for name in $P
+  for name in ${P[@]}
   do
-    echo "$name"
+    echo " inside for loop name : $name"
     if [ $name == $package ]
     then
         echo "$package is already installed"
