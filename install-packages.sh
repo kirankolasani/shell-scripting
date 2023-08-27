@@ -10,7 +10,8 @@ validate() {
      echo "$3" 
     fi
 }
-if [ -z "$packages" ]
+#if [ -z "$packages" ]
+if [ ${#packages[@]} -eq 0 ]
 then 
    echo "Please provide package names correctly to be installed"
    exit 
