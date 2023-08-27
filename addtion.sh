@@ -5,7 +5,7 @@ Validate() {
         read -p "$1" value
         if [ -z "$value" ]; then
             echo "It's empty. Please enter a value."
-        elif [[ $value =~ ^[+-]?[0-9]*\.?[0-9]+$ ]]; then
+        elif [[ ! $value =~ ^[+-]?[0-9]*\.?[0-9]+$ ]]; then
             echo "Please enter a valid number value, using only numbers."
         else
             break
