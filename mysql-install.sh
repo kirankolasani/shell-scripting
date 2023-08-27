@@ -13,7 +13,7 @@ Validate() {
        echo "installation is failed"
     fi
 }
-packages=$((yum list instlled |grep -w "mysql" | awk '{print "mysql"}' ))
+packages=($(yum list installed |grep -w "mysql" | awk '{print "mysql"}'))
 for package in ${packages[@]}
 do
   if [ $package == "mysql" ]
