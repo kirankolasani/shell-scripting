@@ -16,9 +16,8 @@ then
    exit 1
 fi
 for package in $packages
-echo "$package"
-P=($(yum list installed|grep -wo $package))
 do 
+  P=($(yum list installed|grep -wo "$package"))
   for name in $P
   do
     if [ $name == $package ]
