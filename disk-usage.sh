@@ -13,4 +13,4 @@ do
   else
       echo "IT's Okay"
   fi
-done <<< "disk_usage_list"
+done <<< "$disk_usage_list"
