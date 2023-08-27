@@ -21,24 +21,25 @@ do
     echo "inside 1st for loop package : $package"
     P=($(yum list installed|grep -wo "$package"))
     echo "${P[@]}"
-    if [ -n ${P[@]} ]
+    if [ -z ${P[@]} ]
     then
-      for name in ${P[@]}
-      do
-        echo " inside for loop name : $name"
-        if [ $name == $package ]
-        then
-            echo "$package is already installed"
-            break
-        # else
-        #     echo ""
-        #     sudo yum install $package -y
-        #     validate $? "$package is installed successfully" "$package is not installed __Failed"
-        fi
-      done
-    else
         sudo yum install $package -y
         validate $? "$package is installed successfully" "$package is not installed __Failed"
+    else
+        for name in ${P[@]}
+        do
+           echo " inside for loop name : $name"
+           if [ $name == $package ]
+           then
+                echo "$package is already installed"
+                break
+           # else
+           #     echo ""
+           #     sudo yum install $package -y
+           #     validate $? "$package is installed successfully" "$package is not installed __Failed"
+           fi
+        done
+        
     fi  
   
 done
