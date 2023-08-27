@@ -13,9 +13,6 @@ Validate() {
        echo "installation is failed"
     fi
 }
-Install_validate() {
-
-}
 packages=$((yum list instlled |grep -w "mysql" | awk '{print "mysql"}' ))
 for package in ${packages[@]}
 do
