@@ -18,8 +18,9 @@ fi
 echo "${packages[@]}"
 for package in ${packages[@]}
 do 
-  echo "inside 1st for loop package : $package"
-  P=($(yum list installed|grep -wo "$package"))
+    echo "inside 1st for loop package : $package"
+    P=($(yum list installed|grep -wo "$package"))
+    echo "${P[@]}"
     if [ -n ${P[@]} ]
     then
       for name in ${P[@]}
