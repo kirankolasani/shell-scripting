@@ -3,7 +3,7 @@
 # This script is to install mysql 
 Logdir="`pwd`/../logs"
 logfile=$Logdir/$0-$(date +%F).log
->$logfile
+&>$logfile
 user=$(id -u)
 Validate() {
     if [ $1 == 0 ]
