@@ -16,4 +16,4 @@ while IFS= read -r line
 do 
   echo "Deleting $line" &>>$log
   rm -rf "$line" &>>$log
-done < "$old_log_files"  
+done <<< "$old_log_files"  
